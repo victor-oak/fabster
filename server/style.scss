@@ -19,6 +19,8 @@ body {
 }
 
 h2 {
+    margin: 8px 0 32px 0;
+
     font-size: 18px;
 
     color: #553B1B;
@@ -57,6 +59,12 @@ textarea {
 
 }
 
+
+label[for="name"],
+#name {
+    width: 100%;
+}
+
 textarea {
     min-width: 100%;
     resize: none;
@@ -78,9 +86,36 @@ small {
 .form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 24px;
 }
 
+
+.image {
+    min-width: 124px;
+    max-width: 124px;
+    height: 106px;
+
+    background: url(img/add-img.svg) no-repeat;
+    background-color: #FFF;
+    background-position: center;
+
+
+    border: 12px solid transparent;
+
+    border-image: url(img/corner.png) 12;
+
+    
+}
+
+
+.wrap-row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: end;
+
+    max-width: 100%;
+}
 
 
 .create {

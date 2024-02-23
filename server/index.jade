@@ -25,32 +25,30 @@ html(lang="en")
                     h2 Custom card maker for Flesh and Blood TCG.
 
                     .form 
-
-                        label(for="card") Card
-                            select(id="card" name="card")
-                                option(value="Action") Action
-                                option(value="Ally") Ally
-                                option(value="Block") Block
-                                option(value="Demi-Hero") Demi-Hero
-                                option(value="Equipment") Equipment
-                                option(value="Hero") Hero
-                                option(value="Instant") Instant
-                                option(value="Mentor") Mentor
-                                option(value="Resource") Resource
-                                option(value="Reaction") Reaction
-                                option(value="Token") Token
-                                option(value="Weapon") Weapon 
-                                option(value="Custom") Custom
-                                
+                        .wrap-row
+                            label(for="card") Card
+                                select(id="card" name="card")
+                                    option(value="Action") Action
+                                    option(value="Ally") Ally
+                                    option(value="Block") Block
+                                    option(value="Demi-Hero") Demi-Hero
+                                    option(value="Equipment") Equipment
+                                    option(value="Hero") Hero
+                                    option(value="Instant") Instant
+                                    option(value="Mentor") Mentor
+                                    option(value="Resource") Resource
+                                    option(value="Reaction") Reaction
+                                    option(value="Token") Token
+                                    option(value="Weapon") Weapon 
+                                    option(value="Custom") Custom  
                             
-                        
-                        label(for="type") Type 
-                            select(id="type" name="type")
-                                option(value="none") None
-                                option(value="attack") Attack 
-                                option(value="arrow") Attack - Arrow
-                                option(value="item") Item
-                                option(value="aura") Aura
+                            label(for="type") Type 
+                                select(id="type" name="type")
+                                    option(value="none") None
+                                    option(value="attack") Attack 
+                                    option(value="arrow") Attack - Arrow
+                                    option(value="item") Item
+                                    option(value="aura") Aura
 
                         
                         .colorcard
@@ -61,28 +59,38 @@ html(lang="en")
                             label(for="color") Yellow 
                             input(type="radio" id="blue" name="color") 
                             label(for="color") Blue
+                        
+                        .wrap-row
 
-                        label(for="class") Class
-                            select(id="class" name="class")
-                                option(value="Generic" selected) Generic
-                                option(value="Assassin") Assassin
-                                option(value="Brute") Brute
-                                option(value="Guardian") Guardian
-                                option(value="Illusionist") Illusionist
-                                option(value="Mechanologist") Mechanologist
-                                option(value="Ninja") Ninja
-                                option(value="Ranger") Ranger
-                                option(value="Runeblade") Runeblade
-                                option(value="Warrior") Warrior
-                                option(value="Wizard") Wizard
+                            label(for="class") Class
+                                select(id="class" name="class")
+                                    option(value="Generic" selected) Generic
+                                    option(value="Assassin") Assassin
+                                    option(value="Brute") Brute
+                                    option(value="Guardian") Guardian
+                                    option(value="Illusionist") Illusionist
+                                    option(value="Mechanologist") Mechanologist
+                                    option(value="Ninja") Ninja
+                                    option(value="Ranger") Ranger
+                                    option(value="Runeblade") Runeblade
+                                    option(value="Warrior") Warrior
+                                    option(value="Wizard") Wizard
 
-                        .image 
+                            label(for="rarity") Rarity
+                                select(id="rarity" name="rarity")
+                                    option(value="Common" selected) Common
+                                    option(value="Rare") Rare
+                                    option(value="Magestic") Magestic
+                                    option(value="Legendary") Legendary
+                                    option(value="Token") Token
 
-                        label(for="name") Name 
-                            input(id="name" type="text" placeholder="Type the card name...")
+                        .wrap-row
+                            .image 
+                            label(for="name") Name 
+                                input(id="name" type="text" placeholder="Type the card name...")
 
                         label(for="text") Text 
-                            textarea(id="text" name="text" rows="10" placeholder="Type card abilities, effects and lore...")
+                            textarea(id="text" name="text" rows="8" placeholder="Type card abilities, effects and lore...")
 
         section.preview
             img(src="img/btn-link.svg", alt="Link do card").btn.btn-link 
