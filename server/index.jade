@@ -50,16 +50,27 @@ html(lang="en")
                                     option(value="item") Item
                                     option(value="aura") Aura
 
-                        
-                        .colorcard
-                            label Color 
-                            input(type="radio" id="red" name="color") 
-                            label(for="color") Red 
-                            input(type="radio" id="yellow" name="color") 
-                            label(for="color") Yellow 
-                            input(type="radio" id="blue" name="color") 
-                            label(for="color") Blue
-                        
+                        .wrap-row
+
+                            .colorcard
+                                label Color 
+                                .toogle
+                                    input(type="radio" id="red" name="color") 
+                                    label(for="red") Red 
+                                    input(type="radio" id="yellow" name="color") 
+                                    label(for="yellow") Yellow 
+                                    input(type="radio" id="blue" name="color") 
+                                    label(for="blue") Blue
+
+                            label(for="cost") Cost 
+                                input(id="cost" type="number" placeholder="0")
+
+                            label(for="Power") Power 
+                                input(id="power" type="number" placeholder="0")
+
+                            label(for="defense") Defense 
+                                input(id="defense" type="number" placeholder="0")
+
                         .wrap-row
 
                             label(for="class") Class
@@ -90,7 +101,22 @@ html(lang="en")
                                 input(id="name" type="text" placeholder="Type the card name...")
 
                         label(for="text") Text 
-                            textarea(id="text" name="text" rows="8" placeholder="Type card abilities, effects and lore...")
+                            .richtext 
+                                .text-style
+                                    .bold B
+                                    .italic I
+                                .simbols
+                                    img(src="img/cost.png" alt="Energy").simbol-energy
+                                        
+                                    img(src="img/power.png" alt="Power").simbol-power 
+                                        
+                                    img(src="img/defense.png" alt="Defense").simbol-defense
+                                        
+                                    img(src="img/life.png" alt="Life").simbol-life
+                                        
+                                    img(src="img/intelect.png" alt="Intelect").simbol-intelect
+                                        
+                            textarea(id="text" name="text" rows="4" placeholder="Type card abilities, effects and lore...")
 
         section.preview
             img(src="img/btn-link.svg", alt="Link do card").btn.btn-link 
