@@ -25,7 +25,7 @@ html(lang="en")
                     h2 Custom card maker for Flesh and Blood TCG.
 
                     .form 
-                        .wrap-row
+                        .wrap-row.full-width
                             label(for="card") Card
                                 select(id="card" name="card")
                                     option(value="Action") Action
@@ -50,6 +50,20 @@ html(lang="en")
                                     option(value="item") Item
                                     option(value="aura") Aura
 
+                            label(for="class") Class
+                                select(id="class" name="class")
+                                    option(value="Generic" selected) Generic
+                                    option(value="Assassin") Assassin
+                                    option(value="Brute") Brute
+                                    option(value="Guardian") Guardian
+                                    option(value="Illusionist") Illusionist
+                                    option(value="Mechanologist") Mechanologist
+                                    option(value="Ninja") Ninja
+                                    option(value="Ranger") Ranger
+                                    option(value="Runeblade") Runeblade
+                                    option(value="Warrior") Warrior
+                                    option(value="Wizard") Wizard
+
                         .wrap-row
 
                             .colorcard
@@ -72,21 +86,11 @@ html(lang="en")
                                 input(id="defense" type="number" placeholder="0")
 
                         .wrap-row
+                            .image 
 
-                            label(for="class") Class
-                                select(id="class" name="class")
-                                    option(value="Generic" selected) Generic
-                                    option(value="Assassin") Assassin
-                                    option(value="Brute") Brute
-                                    option(value="Guardian") Guardian
-                                    option(value="Illusionist") Illusionist
-                                    option(value="Mechanologist") Mechanologist
-                                    option(value="Ninja") Ninja
-                                    option(value="Ranger") Ranger
-                                    option(value="Runeblade") Runeblade
-                                    option(value="Warrior") Warrior
-                                    option(value="Wizard") Wizard
-
+                            label(for="name") Name 
+                                input(id="name" type="text" placeholder="Type the card name...")
+                            
                             label(for="rarity") Rarity
                                 select(id="rarity" name="rarity")
                                     option(value="Common" selected) Common
@@ -94,11 +98,6 @@ html(lang="en")
                                     option(value="Magestic") Magestic
                                     option(value="Legendary") Legendary
                                     option(value="Token") Token
-
-                        .wrap-row
-                            .image 
-                            label(for="name") Name 
-                                input(id="name" type="text" placeholder="Type the card name...")
 
                         label(for="text") Text 
                             .richtext 
@@ -116,7 +115,7 @@ html(lang="en")
                                         
                                     img(src="img/intelect.png" alt="Intelect").simbol-intelect
                                         
-                            textarea(id="text" name="text" rows="4" placeholder="Type card abilities, effects and lore...")
+                            textarea(id="text" name="text" rows="6" placeholder="Type card abilities, effects and lore...")
 
         section.preview
             img(src="img/btn-link.svg", alt="Link do card").btn.btn-link 
