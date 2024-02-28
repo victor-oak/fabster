@@ -150,13 +150,15 @@ input#defense {
     padding-left: 30px;
 
     background-position: left center;
+    background-color: #fff;
+    background-repeat: no-repeat;
 }
 
-input#cost { background: url(/img/cost.png) no-repeat #fff; }
+input#cost { background-image: url(/img/cost.png); }
 
-input#power { background: url(/img/power.png) no-repeat #fff; }
+input#power { background-image: url(/img/power.png); }
 
-input#defense { background: url(/img/defense.png) no-repeat #fff; }
+input#defense { background-image: url(/img/defense.png); }
 
 
 .richtext, 
@@ -354,4 +356,135 @@ label:has(.richtext) {
 
 
 
+}
+
+
+.card-content {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    padding: 24px;
+}
+
+.card-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 8px;
+    
+}
+
+.card-name {
+    width: 100%;
+    padding-left: 20px;
+    text-align: center;
+
+}
+
+.card-cost {
+    padding-right: 12px;
+    margin-top: -2px;
+
+}
+
+.card-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    margin-top: 240px;
+    padding: 0 16px;
+    
+}
+
+
+.card-footer  {
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    padding: 0 52px;
+
+    
+   
+}
+
+.card-power,
+.card-defense {
+    width: 24px;
+    text-align: center;
+} 
+
+.card-type {
+    max-width: 180px;
+    margin-top: -7px;
+
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: center;    
+}
+
+
+.card-illustration {
+    position: absolute;
+    top: 54px;
+    left: 0;
+
+
+
+    width: 100%;
+    height: 240px;
+
+    background-color: white;
+    background-image:
+    linear-gradient(45deg, #ccc 25%, transparent 25%),
+    linear-gradient(-45deg, #ccc 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ccc 75%),
+    linear-gradient(-45deg, transparent 75%, #ccc 75%);
+    background-size:20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+
+    
+
+}
+
+.card-preview img {
+    position: absolute;
+
+    z-index: 2;
+}
+
+
+.card-details {
+    display: flex;
+    gap: 24px;
+
+    padding-top: 29px;
+    padding-left: 58px;
+
+    font-size: 10px;
+    font-weight: normal;
+
+    color: #D2D2D2;
+}
+
+.card-rarity {
+    font-size: 9px;
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: #545454;
+    text-align: center;
+    vertical-align: middle;
 }
