@@ -51,7 +51,8 @@ select {
 input:not([type="radio"]),
 select,
 textarea,
-.toogle {
+.toogle,
+.edit-card {
 
     border: 12px solid transparent;
 
@@ -66,6 +67,13 @@ textarea,
 }
 
 
+.edit-card {
+    display: none;
+    background-color: #EAD7C6;
+    text-decoration: none;
+    
+}
+
 label[for="name"],
 #name {
     width: 100%;
@@ -79,6 +87,8 @@ textarea {
 
 
 small {
+    padding: 0 8px;
+
     color: #A7A7A7;
 
     text-align: center;
@@ -315,6 +325,7 @@ label:has(.richtext) {
     position: relative;
     
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -331,24 +342,29 @@ label:has(.richtext) {
     text-align: center;
 }
 
-.btn.btn-link,
-.btn.btn-download {
-    width: 40px;
-    height: 40px;
-
+.btng-group {
     position: absolute;
     right: 40px;
     top: 40px;
+    left: 0;
+
+    display: flex;
+    width: 100%;
+    padding: 0 40px;
+    justify-content: flex-end;
 }
 
-.btn.btn-link {
-    right: 96px;
+.btns-action {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
 }
 
-
-
-
-
+.btn.btn-link,
+.btn.btn-download {
+    width: 40px;
+    height: 40px; 
+}
 
 .card-preview {
     position: absolute;
@@ -364,7 +380,7 @@ label:has(.richtext) {
 
 
     img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
@@ -501,4 +517,64 @@ label:has(.richtext) {
     background-color: #545454;
     text-align: center;
     vertical-align: middle;
+}
+
+
+@media screen and (max-width: 1023px) {
+    
+    body {
+        display: block;
+    } 
+
+    .wrap-row {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    .create {
+        height: 200px;
+        min-height: 200px;
+    }
+
+    .create .wrap .subwrap {
+        padding: 12px;
+        overflow: hidden;
+    }
+
+    .create .logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .create h2 {
+        text-align: center;
+    }
+
+
+    .preview {
+        height: auto;
+        padding-bottom: 24px;
+        gap: 32px;
+    }
+
+    .btng-group {
+        justify-content: space-between;
+        position: static;
+        padding: 0 16px;
+    }
+
+    .edit-card {
+        display: block;
+    }
+
+    .card-preview {
+        position: relative;
+        margin-top: -64px;
+    }
+
+    .preview small {
+        position: static;
+        font-size: 10px;
+    }
+
 }
