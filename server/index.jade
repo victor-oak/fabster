@@ -10,6 +10,8 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet")
 
         link(rel="stylesheet" href="style.css")
+
+        script(src="script.js" type="text/javascript") 
     body
         section.create
             .wrap
@@ -79,7 +81,7 @@ html(lang="en")
                             label(for="cost") Cost 
                                 input(id="cost" type="number" placeholder="0")
 
-                            label(for="Power") Power 
+                            label(for="power") Power 
                                 input(id="power" type="number" placeholder="0")
 
                             label(for="defense") Defense 
@@ -116,6 +118,8 @@ html(lang="en")
                                     img(src="img/intelect.png" alt="Intelect").simbol-intelect
                                         
                             textarea(id="text" name="text" rows="6" placeholder="Type card abilities, effects and lore...")
+                        
+                        a(href="#").view-card View card
 
         section.preview
 

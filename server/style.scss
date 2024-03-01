@@ -52,7 +52,8 @@ input:not([type="radio"]),
 select,
 textarea,
 .toogle,
-.edit-card {
+.edit-card,
+.view-card {
 
     border: 12px solid transparent;
 
@@ -67,12 +68,17 @@ textarea,
 }
 
 
-.edit-card {
+.edit-card,
+.view-card {
     display: none;
     background-color: #EAD7C6;
     text-decoration: none;
-    
+
+    font-weight: bold;
+    color: #873328;
 }
+
+
 
 label[for="name"],
 #name {
@@ -548,18 +554,23 @@ label:has(.richtext) {
 
     .create h2 {
         text-align: center;
+        margin-bottom: 100px;
     }
 
 
     .preview {
         height: auto;
-        padding-bottom: 24px;
+        padding-bottom: 0;
         gap: 32px;
     }
 
     .btng-group {
         justify-content: space-between;
-        position: static;
+        position: fixed;
+        top: auto;
+        bottom: 16px;
+        left: 0;
+        right: 0;
         padding: 0 16px;
     }
 
@@ -577,4 +588,75 @@ label:has(.richtext) {
         font-size: 10px;
     }
 
+
+
+
+    // Modifiers on mobile edition
+
+    .mobile-edit {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .mobile-edit .create {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .mobile-edit .btng-group {
+        display: none;
+    }
+
+    .mobile-edit .card-preview {
+        margin-top: 0;
+    }
+
+    .mobile-edit .create h2 {
+      
+        margin-bottom: 32px;
+    }
+
+    .mobile-edit .create .subwrap {
+        overflow-y: scroll;
+        padding-bottom: 64px;
+    }
+
+
+    .mobile-edit .view-card {
+        display: block;
+        position: fixed;
+        bottom: 16px;
+        left: 16px;
+        right: 16px;
+        text-align: center;
+    }
+
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 680px) {
+    .card-preview {
+        transform: scale(.9);
+        margin-top: -90px;
+    }
+
+    .preview small {
+        margin-top: -40px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .card-preview {
+        transform: scale(.8);
+        margin-top: -110px;
+    }
+
+    .preview small {
+        margin-top: -60px;
+    }
 }
